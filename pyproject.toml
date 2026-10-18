@@ -21,6 +21,7 @@ dependencies = [
 
 [project.optional-dependencies]
 hotkey = ["keyboard>=0.13.4"]
+build = ["pyinstaller>=6.0", "keyboard>=0.13.4"]
 
 [project.scripts]
 snaptext = "snaptext.cli:main"

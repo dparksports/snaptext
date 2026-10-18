@@ -17,7 +17,7 @@ Fully local. No cloud. No admin rights.
 [![Platforms](https://img.shields.io/badge/platforms-Windows%20%7C%20macOS%20%7C%20Linux-green.svg)](#-how-each-os-is-supported)
 [![OCR](https://img.shields.io/badge/OCR-RapidOCR%20on%20ONNX%20Runtime-orange.svg)](#%EF%B8%8F-design-rules-this-project-lives-by)
 
-[Why](#-why) · [The 5-second flow](#-the-5-second-flow) · [Commands](#-commands) · [Install](#%EF%B8%8F-install) · [Platform support](#-how-each-os-is-supported) · [Token costs](docs/token-costs.md)
+[Why](#-why) · [The 5-second flow](#-the-5-second-flow) · [Commands](#-commands) · [Install](#%EF%B8%8F-install) · [Platform support](#-how-each-os-is-supported) · [Token costs](docs/token-costs.md) · [DIY builds](BUILDING.md)
 
 </div>
 
@@ -97,6 +97,10 @@ Pure pip wheels on all three OSes; OCR models download on first run.
 PDFs that already have a text layer are read directly (no OCR, no loss);
 image-only PDFs, photos and screenshots get EXIF rotation and auto-contrast,
 then local OCR.
+
+**DIY builds** — standalone binaries via `pyinstaller snaptext.spec`, a
+Docker image, or OS-native packages (setup.exe / .app / .deb): see
+**[BUILDING.md](BUILDING.md)**.
 
 ## 💻 How each OS is supported
 
