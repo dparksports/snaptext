@@ -17,23 +17,40 @@ Fully local. No cloud. No admin rights.
 [![Platforms](https://img.shields.io/badge/platforms-Windows%20%7C%20macOS%20%7C%20Linux-green.svg)](#-how-each-os-is-supported)
 [![OCR](https://img.shields.io/badge/OCR-RapidOCR%20on%20ONNX%20Runtime-orange.svg)](#%EF%B8%8F-design-rules-this-project-lives-by)
 
-[Why](#-why) · [The 5-second flow](#-the-5-second-flow) · [Commands](#-commands) · [Install](#%EF%B8%8F-install) · [Platform support](#-how-each-os-is-supported)
+[Why](#-why) · [The 5-second flow](#-the-5-second-flow) · [Commands](#-commands) · [Install](#%EF%B8%8F-install) · [Platform support](#-how-each-os-is-supported) · [Token costs](docs/token-costs.md)
 
 </div>
 
 ## 🎯 Why
 
-> Attaching a screenshot to ask an LLM about a paragraph sends megabytes and
-> makes the model do the OCR itself — badly, expensively, and only if the chat
-> accepts images at all. **snaptext sends ~200 bytes of exact text instead,
-> to any chat, from any screen.**
+> **Chat models turn images into thousands of tokens before reading a word —
+> and you pay for pixels, not content.**
 
-- **Smaller prompts** — 3 MB PNG → 200 B of text. Same information.
+| The same paragraph, two ways | Input tokens |
+|---|---|
+| Pasted as text | ~60 |
+| Attached as a full-screen screenshot | ~1,000–4,000 |
+
+A screenshot is billed by its size, not by the text it carries: one error
+dialog in the corner of a full-screen capture costs like a dense page. The
+image rides along in context and is re-sent on every follow-up, and the
+model still squints — misread glyphs mean correction rounds, each one
+paying for the picture again.
+
+**snaptext sends ~200 bytes of exact text instead — to any chat, from any
+screen.**
+
+- **Smaller prompts** — 3 MB PNG → 200 B of text, typically a 15–50× token
+  saving per message.
 - **Works everywhere** — text-only inputs, terminals, and API calls included.
 - **Honest OCR** — lines the engine read with low confidence carry a ` [?]`
   marker, so you (and the model) know exactly what to double-check.
 - **Private** — recognition runs on your machine via ONNX Runtime. Nothing
   leaves it.
+
+For the per-provider math — how OpenAI, Anthropic and Google actually count
+image tokens, worked examples, and how to measure it yourself — see
+**[the technical note](docs/token-costs.md)**.
 
 ## ⚡ The 5-second flow
 
