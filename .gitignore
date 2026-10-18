@@ -1,0 +1,24 @@
+# environments / build
+.venv/
+__pycache__/
+*.egg-info/
+build/
+dist/
+
+# local working data - never publish
+extracted_text/
+test_out/
+*.pdf
+*.PDF
+*.jpg
+*.jpeg
+*.eml
+gen_assets.py
+release_notes.md
+
+# the v0 precursor script, superseded by the snaptext package
+extract_text.py
+
+# images are tracked only under assets/
+*.png
+!assets/*.png
