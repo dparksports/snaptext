@@ -12,12 +12,15 @@ ZCode · z.ai · autocrawl · ChatGPT · Claude · any box that accepts text.
 
 Fully local. No cloud. No admin rights.
 
+**New to command-line tools?** Start with the **[plain-English guide](GUIDE.md)** —
+it explains the everyday flow without the jargon.
+
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg)](pyproject.toml)
 [![Platforms](https://img.shields.io/badge/platforms-Windows%20%7C%20macOS%20%7C%20Linux-green.svg)](#-how-each-os-is-supported)
 [![OCR](https://img.shields.io/badge/OCR-RapidOCR%20on%20ONNX%20Runtime-orange.svg)](#%EF%B8%8F-design-rules-this-project-lives-by)
 
-[Why](#-why) · [The 5-second flow](#-the-5-second-flow) · [Commands](#-commands) · [Install](#%EF%B8%8F-install) · [Platform support](#-how-each-os-is-supported) · [Token costs](docs/token-costs.md) · [DIY builds](BUILDING.md)
+[Guide](GUIDE.md) · [Why](#-why) · [The 5-second flow](#-the-5-second-flow) · [Commands](#-commands) · [Install](#%EF%B8%8F-install) · [Platform support](#-how-each-os-is-supported) · [Token costs](docs/token-costs.md) · [DIY builds](BUILDING.md)
 
 </div>
 
